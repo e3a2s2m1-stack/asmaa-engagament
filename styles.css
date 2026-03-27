@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111; /* خلفية سودة شيك */
+    overflow: hidden; /* عشان لو الكلام كبير ما يطلعش برا الصفحة */
+}
+
+.heart-container {    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* كبرنا القلب عشان الكلام يكفي */
+    height: 300px;
+    animation: heartbeat 1.5s infinite ease-in-out; /* القلب بينبض */
+}
+
+.heart-shape {
+    position: absolute;
+    font-size: 300px; /* حجم القلب نفسه */
+    color: #453ce7; /* لون أحمر هادي */
+    text-shadow: 0 0 30px #e74c3c; /* إضاءة منورة من ورا القلب */
+}
+
+.congrats-text {
+    position: absolute;
+    color: white; /* لون الكلام أبيض عشان يبان */
+    font-family: 'Arial', sans-serif; /* خط شيك ومقروء */
+    text-align: center;
+    font-size: 24px; /* حجم الكلام */
+    line-height: 1.5; /* مسافة بين السطور */
+    padding: 20px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5); /* ظل بسيط عشان يفصل الكلام عن القلب */
+    z-index: 10; /* عشان الكلام يظهر فوق القلب */
+}
+
+/* حركة نبض القلب */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
